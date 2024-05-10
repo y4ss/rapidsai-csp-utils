@@ -27,7 +27,7 @@ except:
 gpu_name = pynvml.nvmlDeviceGetName(pynvml.nvmlDeviceGetHandleByIndex(0))
 rapids_version = "24.4.*"
 
-if ('P' not in gpu_name):
+if ('P' not in str(gpu_name)):
   print('***********************************************************************')
   print('Woo! Your instance has a '+ str(gpu_name)+' GPU!')
   print(f'We will install the latest stable RAPIDS via pip {rapids_version}!  Please stand by, should be quick...')
